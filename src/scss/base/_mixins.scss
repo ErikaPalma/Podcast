@@ -57,3 +57,24 @@
     background-size: cover;
     background-position: top center;
 }
+
+@mixin headings ($color, $linea){
+    font-size: 3.6rem;
+    margin-top: 5rem;  
+    display: inline-block;
+    margin-top: 5rem;
+    color: $color;
+
+    @include tablet{
+        margin-top: 0;
+    }
+
+    &::after{
+        content: '';
+        background-color: $linea;
+        display: block;
+        height: 1rem;
+        width: calc(100% + 1rem);
+        margin: -1.4rem 0 0 0;
+    }
+}

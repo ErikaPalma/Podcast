@@ -11,6 +11,35 @@
     }
 
     &__heading{
-       
+       @include m.headings(v.$secundario, v.$primario);
     }
+}
+
+.benefits{
+    background-color: v.$primario;
+    padding: v.$separacion 0;
+
+    &__grid{
+
+        @include m.tablet{
+            @include m.grid(2, v.$separacion);
+            align-items: center;
+        }
+    }
+
+    &__img{
+        transition: transform .3s;
+        @include m.tablet{
+            width: 50rem;
+        }
+
+        :hover{
+            transform: rotate(8deg);
+        }
+    }
+
+    &__heading{
+        @include m.headings(v.$secundario, v.$blanco);
+    }
+
 }

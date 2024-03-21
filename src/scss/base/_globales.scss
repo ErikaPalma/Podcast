@@ -40,26 +40,6 @@ h1 {
     font-size: 4rem;
 }
 
-h2{
-    font-size: 3.6rem;
-    display: inline-block;
-    margin-top: 5rem;
-    color: v.$secundario;
-
-    @include m.tablet{
-        margin-top: 0;
-    }
-
-    &::after{
-        content: '';
-        background-color: v.$primario;
-        display: block;
-        height: 1rem;
-        width: calc(100% + 1rem);
-        margin: -1.4rem 0 0 0;
-    }
-}
-
 h3 {
     font-size: 2.8rem;
     text-align: center;
@@ -68,4 +48,7 @@ h3 {
 ul {
     padding: 0;
     list-style: none;
+}
+p{
+    line-height: 1.4;
 }
