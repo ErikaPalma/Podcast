@@ -43,3 +43,96 @@
     }
 
 }
+
+.estadistics{
+    margin: 0 auto;
+    padding: 8rem 0;
+
+    &__heading{
+        @include m.headings(v.$secundario, v.$primario);
+
+    }
+
+}
+
+.pricing{
+    background-color: v.$secundario;
+    padding: v.$separacion 0;
+
+    &__content{
+        p{
+            color: v.$blanco;
+            font-size: 1.7rem;
+        }
+    }
+
+    &__heading{
+
+        @include m.headings(v.$blanco, v.$primario);
+ 
+    }
+
+    &__grid{
+
+        margin-top: v.$separacion;
+
+        @include m.tablet{
+            
+            @include m.grid(3, 0);
+            align-items: center;
+        }
+
+    
+    }
+
+    &__list{
+        text-align: center;
+        line-height: 2.2;
+    }
+}
+
+.pricing{
+
+    &__card{
+
+    background-color: v.$primario;
+    padding: 5rem 0;
+    border-radius: 3rem;
+    height: 60rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-size: 10rem;
+    background-position: 50% 2rem;
+
+    &--white{
+        background-color: v.$blanco;
+        border-radius: 0;
+        height: 50rem;
+    }
+
+    &--1{
+        background-image: url(../../../build/img/icono_inicio.svg);
+    }
+
+    &--2{
+        background-image: url(../../../build/img/icono_negocio.svg);
+    }
+
+    &--3{
+        background-image: url(../../../build/img/icono_pro.svg);
+    }
+}
+    &__btn{
+        @include m.boton(v.$primario, v.$secundario);
+        &--border{
+            @include m.boton(v.$primario, v.$secundario);
+            border: 2px solid v.$blanco;
+
+        }
+    }
+
+   
+}
